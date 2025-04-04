@@ -1,7 +1,7 @@
 {
   "name": "ds-project-track",
   "private": false,
-  "version": "0.1.31",
+  "version": "0.1.32",
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "./dist/ds-project-track.umd.js",
@@ -10,6 +10,7 @@
     ".": {
       "import": "./dist/ds-project-track.es.js",
       "require": "./dist/ds-project-track.umd.js",
+      "types": "./dist/index.d.ts",
       "default": "./dist/ds-project-track.es.js"
     },
     "./styles.css": {
