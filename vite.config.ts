@@ -1,32 +1,31 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
-import { fileURLToPath } from 'url'
-import dts from 'vite-plugin-dts'
+import dts from 'vite-plugin-dts';
+import { peerDependencies } from './package.json'
+import tailwindcss from '@tailwindcss/vite'
 
-// Criando o equivalente a __dirname para ESM
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
-
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    dts({
+      tsconfigPath: './tsconfig.app.json',
+      insertTypesEntry: true,
+      exclude: ["**/*.stories.ts", "**/*.test.tsx"]
+    }),
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'DSProjectTrack',
-      fileName: 'index',
-      formats: ['es'],
+      entry: './src/index.ts',
+      name: 'ds-project-track',
+      formats: ['es', 'cjs', 'umd'],
+      fileName: (format) => `ds-project-track.${format}.js`
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: [...Object.keys(peerDependencies)],
       output: {
-        globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
-        },
-        assetFileNames: 'assets/[name][extname]',
-      },
-    },
-    cssCodeSplit: false,
-  },
+        globals: { react: 'React', 'react-dom': 'ReactDOM' },
+      }
+    }
+  }
 })
