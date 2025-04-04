@@ -6,7 +6,14 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      jsxRuntime: 'classic',
+      babel: {
+        plugins: [
+          ['@babel/plugin-transform-react-jsx', { runtime: 'classic' }]
+        ]
+      }
+    }),
     tailwindcss(),
     dts({
       tsconfigPath: './tsconfig.app.json',
@@ -25,6 +32,7 @@ export default defineConfig({
       external: [...Object.keys(peerDependencies)],
       output: {
         globals: { react: 'React', 'react-dom': 'ReactDOM' },
+        banner: () => "import React from 'react';",
       }
     }
   }
