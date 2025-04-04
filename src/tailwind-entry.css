@@ -1,1 +1,10 @@
+/**
+ * Arquivo principal de entrada do Tailwind CSS
+ * Importa os tokens do design system e o Tailwind CSS
+ */
+
+/* Importa os tokens do design system */
+@import "./tokens/tokens.css";
+
+/* Importa o Tailwind CSS */
 @import "tailwindcss";

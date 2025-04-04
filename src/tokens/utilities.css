@@ -1,0 +1,66 @@
+/**
+ * Design System - Utilitários Personalizados
+ * Utilizando o novo padrão do Tailwind 4.x com a diretiva @utility
+ */
+
+/* Utilitário simples */
+@utility content-auto {
+  content-visibility: auto;
+}
+
+/* Utilitário complexo com seletores aninhados */
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Utilitário funcional que aceita um argumento */
+@utility tab-* {
+  tab-size: --value(integer);
+}
+
+/* Utilitário para aspect-ratio */
+@utility aspect-* {
+  aspect-ratio: --value(ratio, [ratio]);
+}
+
+/* Utilitário para opacidade com suporte a porcentagem e valores numéricos */
+@utility opacity-* {
+  opacity: --value([percentage]);
+  opacity: calc(--value(integer) * 1%);
+  opacity: --value(--opacity-*);
+}
+
+/* Utilitário para inset com suporte a valores positivos e negativos */
+@utility inset-* {
+  inset: --value([length], [percentage]);
+}
+
+@utility -inset-* {
+  inset: calc(--value([length], [percentage]) * -1);
+}
+
+/* Utilitário para tamanho de texto com modificador de line-height */
+@utility text-* {
+  font-size: --value(--text-*, [length]);
+  line-height: --modifier(--leading-*, [length], [*]);
+}
+
+/* Variante personalizada para tema */
+@custom-variant theme-dark {
+  &:where([data-theme="dark"] *) {
+    @slot;
+  }
+}
+
+/* Variante personalizada para hover em qualquer dispositivo */
+@custom-variant any-hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+}

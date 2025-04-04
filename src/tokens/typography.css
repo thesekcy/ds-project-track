@@ -1,0 +1,52 @@
+/**
+ * Design System Tokens - Tipografia
+ * Utilizando o novo padrão do Tailwind 4.x com a diretiva @theme
+ */
+
+@theme {
+  /* Famílias de fontes */
+  --font-display: "Satoshi", "sans-serif";
+  --font-body: "Inter", var(--font-sans);
+  --font-code: var(--font-mono);
+
+  /* Tamanhos de fonte e altura de linha */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-base: 1rem;
+  --text-base--line-height: 1.5;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.5;
+  --text-xl: 1.25rem;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 1.5rem;
+  --text-2xl--line-height: 1.33;
+  --text-3xl: 1.875rem;
+  --text-3xl--line-height: 1.33;
+  --text-4xl: 2.25rem;
+  --text-4xl--line-height: 1.25;
+  --text-5xl: 3rem;
+  --text-5xl--line-height: 1.25;
+  --text-6xl: 3.75rem;
+  --text-6xl--line-height: 1.2;
+
+  /* Pesos de fonte */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Espaçamento entre letras */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}

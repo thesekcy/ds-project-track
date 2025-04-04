@@ -1,0 +1,12 @@
+/**
+ * Design System Tokens - Arquivo Principal
+ * Importa todos os tokens individuais do design system
+ * Utilizando o novo padrão do Tailwind 4.x com a diretiva @theme
+ */
+
+@import "./colors.css";
+@import "./typography.css";
+@import "./spacing.css";
+@import "./borders.css";
+@import "./animations.css";
+@import "./utilities.css";

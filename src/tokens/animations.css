@@ -1,0 +1,34 @@
+/**
+ * Design System Tokens - Animações e Transições
+ * Utilizando o novo padrão do Tailwind 4.x com a diretiva @theme
+ */
+
+@theme {
+  /* Curvas de aceleração */
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Durações */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+
+  /* Atrasos */
+  --delay-75: 75ms;
+  --delay-100: 100ms;
+  --delay-150: 150ms;
+  --delay-200: 200ms;
+  --delay-300: 300ms;
+  --delay-500: 500ms;
+  --delay-700: 700ms;
+  --delay-1000: 1000ms;
+}
