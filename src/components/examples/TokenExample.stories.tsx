@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { TokenExample } from './TokenExample';
 
 const meta = {
-  title: 'Examples/TokenExample',
+  title: '_Examples/TokenExample',
   component: TokenExample,
   parameters: {
     layout: 'centered',

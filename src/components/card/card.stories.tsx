@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Card } from "./card";
 
 const meta = {
-  title: "Example/Card",
+  title: "Components/Card",
   component: Card,
   tags: ["docsPage"],
   argTypes: {

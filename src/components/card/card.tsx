@@ -60,6 +60,7 @@ export const Card = ({
                     ))}
                 </div>
             )}
+
             {actionButtonText && (
                 <div className="px-6 py-4">
                     <button 

@@ -5,31 +5,32 @@
 
 @theme {
   /* Famílias de fontes */
-  --font-display: "Satoshi", "sans-serif";
+  --font-inter: "Inter", sans-serif; 
+  --font-display: "Inter", "sans-serif";
   --font-body: "Inter", var(--font-sans);
   --font-code: var(--font-mono);
 
   /* Tamanhos de fonte e altura de linha */
-  --text-xs: 0.75rem;
-  --text-xs--line-height: 1.5;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.5;
-  --text-base: 1rem;
-  --text-base--line-height: 1.5;
-  --text-lg: 1.125rem;
-  --text-lg--line-height: 1.5;
-  --text-xl: 1.25rem;
-  --text-xl--line-height: 1.5;
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: 1.33;
-  --text-3xl: 1.875rem;
-  --text-3xl--line-height: 1.33;
-  --text-4xl: 2.25rem;
-  --text-4xl--line-height: 1.25;
-  --text-5xl: 3rem;
-  --text-5xl--line-height: 1.25;
-  --text-6xl: 3.75rem;
-  --text-6xl--line-height: 1.2;
+  --text-xs: 0.75rem; /* 12px */
+  --text-xs--line-height: 1.5; /* 24px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-sm--line-height: 1.5; /* 24px */
+  --text-base: 1rem; /* 16px */
+  --text-base--line-height: 1.5; /* 24px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-lg--line-height: 1.5; /* 24px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-xl--line-height: 1.5; /* 24px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-2xl--line-height: 1.33; /* 31.92px */
+  --text-3xl: 1.875rem; /* 30px */
+  --text-3xl--line-height: 1.33; /* 39.9px */
+  --text-4xl: 2.25rem; /* 36px */
+  --text-4xl--line-height: 1.25; /* 45px */
+  --text-5xl: 3rem; /* 48px */
+  --text-5xl--line-height: 1.25; /* 60px */
+  --text-6xl: 3.75rem; /* 60px */
+  --text-6xl--line-height: 1.2; /* 72px */
 
   /* Pesos de fonte */
   --font-weight-thin: 100;
@@ -50,3 +51,4 @@
   --tracking-wider: 0.05em;
   --tracking-widest: 0.1em;
 }
+
